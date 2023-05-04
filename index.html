@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="game.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="nav container">
+        <h2 class="nav__logo">Cristian Bravo.</h2>
+
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#" class="nav__link">Inicio</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Acerca de</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Contacto</a></li>
+        </ul>
+
+        <figure class="nav__menu">
+          <img
+            src="https://img2.freepng.es/20180429/dcw/kisspng-hamburger-button-computer-icons-menu-drop-down-lis-5ae5e3a3985989.1936156115250154596241.jpg"
+            alt="Icono"
+            class="nav__icon"
+          />
+        </figure>
+      </nav>
+
+      <section class="hero__main container">
+        <div class="hero__texts">
+          <h1 class="hero__title">Hello!, My name is Cristian Bravo</h1>
+          <p class="hero__subtitle">
+            Texto complementario para dar una idea general del proyecto
+          </p>
+          <!-- <a href="#" class="hero__cta">ABRE EL MODAL!</a> -->
+        </div>
+
+        <figure class="hero__picture">
+          <img
+            src="https://th.bing.com/th/id/R.c82b3644d5137d6cf4a1ac1d7aeb2d95?rik=EDXul6R49asN6Q&riu=http%3a%2f%2fwww.solofondos.com%2fwp-content%2fuploads%2f2016%2f06%2fo_neill_wave_by_colekacmar-d7pzf74-1024x576.jpg&ehk=xk3NDRJJYLCHQaERLxUQbq51VUf%2bnPGhlQZDJoWV1co%3d&risl=&pid=ImgRaw&r=0"
+            alt="Imagen de Inicio"
+            class="hero__img"
+          />
+        </figure>
+      </section>
+
+      <div style="height: 150px; overflow: hidden" class="hero__waves">
+        <svg
+          viewBox="0 0 500 150"
+          preserveAspectRatio="none"
+          style="height: 100%; width: 100%"
+        >
+          <path
+            d="M0.00,49.99 C262.08,217.40 378.89,-120.09 500.00,49.99 L500.00,150.00 L0.00,150.00 Z"
+            style="stroke: none; fill: #fff"
+          ></path>
+        </svg>
+      </div>
+    </header>
+
+    <section class="modal">
+      <div class="modal__container">
+        <h2 class="modal__title">
+          ¡Rompe tu mejor record y recibe un premio sorpresa!
+        </h2>
+        <!-- <p class="modal__paragraph">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti
+          nobis nisi quibusdam doloremque expedita quae ipsam accusamus quisquam
+          quas, culpa tempora. Veniam consectetur deleniti maxime.
+        </p> -->
+        <a href="#" class="modal__close">X</a>
+
+        <div id="InicioGame">
+          <div id="GameContenedor" class="contenedor mediodia">
+            <div class="suelo"></div>
+
+            <div class="dino dino-corriendo"></div>
+
+            <div class="score">0</div>
+          </div>
+          <div class="game-over containerGameOver" style="width: 300px">
+            <h3>¡FELICITACIONES GANASTE!</h3>
+            <p>
+              Tienes un <strong id="CantidadGanador"></strong> que puedes
+              redimir con el código <strong id="LabelGanador"></strong> en
+              nuestro sitio web:
+              <a
+                class="linkTiendaOficial"
+                href="https://www.speedocolombia.com/"
+                >http://www.speedocolombia.com</a
+              >
+            </p>
+            <ul>
+              <li>*Aplica solo en nuestra tienda Online.</li>
+              <li>*No acumulable con otras promociones</li>
+              <li>* Válido solo por el mes de mayo.</li>
+            </ul>
+            <p></p>
+            <button onclick="ResetGame()">RESET</button>
+          </div>
+          <div class="game-over loser">
+            Inténtalo de nuevo
+            <button onclick="ResetGame()">RESET</button>
+          </div>
+        </div>
+
+        <a href="#" class="init__game">Inicia el Juego</a>
+      </div>
+    </section>
+
+    <script src="./game.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>

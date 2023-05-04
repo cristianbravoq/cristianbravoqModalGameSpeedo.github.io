@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+
+#InicioGame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedor {
+  width: 90vw;
+  max-width: 920px;
+  height: 280px;
+  margin: 0 auto;
+  position: relative;
+  background-color: #89d5fd;
+  /*background-color: linear-gradient(#b7d6c7, transition) #ffe2d1;linear-gradient(#90ebff, white);*/
+  /* background: url(img/Fondo.png) no-repeat; */
+  /* background: url(imgOneill/Fondo\ 2.png) no-repeat;
+        background-position-y:center ; */
+  transition: background 2.5s linear;
+  overflow: hidden;
+}
+
+.mediodia {
+  background: linear-gradient(
+    180deg,
+    rgba(252, 160, 48, 1) 2%,
+    rgba(137, 213, 253, 1) 56%
+  );
+}
+
+.tarde {
+  background: linear-gradient(180deg, rgba(89, 138, 153, 1) 15%, #fda63c 100%);
+}
+
+.noche {
+  background: linear-gradient(
+    180deg,
+    rgba(62, 92, 101, 1) 15%,
+    rgba(89, 138, 153, 1) 100%
+  );
+}
+
+.dino {
+  width: 84px;
+  height: 84px;
+
+  position: absolute;
+  bottom: 20px;
+  left: 15px;
+  z-index: 2;
+
+  background: url(img/Nadador.png) repeat 0px 0px;
+  background-size: 168px 84px;
+  background-position-x: 0px;
+}
+
+.dino-corriendo {
+  animation: animarDino 1.37s steps(2) infinite;
+}
+
+.dino-estrellado {
+  background-position-x: -252px;
+}
+
+.suelo {
+  width: 200%;
+  height: 62px;
+
+  position: absolute;
+  z-index: 3;
+  bottom: 0;
+  left: 0;
+
+  background: url(img/Agua.png) repeat 0px 10px;
+  background-position-y: 0 px;
+  background-size: 40% 42px;
+  background-color: #63caf2;
+  overflow-y: visible;
+}
+
+.cactus {
+  width: 59px;
+  height: 67px;
+
+  position: absolute;
+  bottom: 45px;
+  left: 600px;
+  z-index: 1;
+
+  background: url(img/Obstáculo1.png) no-repeat;
+}
+
+.cactus2 {
+  width: 76px;
+  height: 67px;
+
+  background: url(img/Obstáculo2.png) no-repeat;
+}
+
+.nube {
+  width: 92px;
+  height: 26px;
+
+  position: absolute;
+  z-index: 0;
+
+  background: url(img/nube.png) no-repeat;
+  background-size: 92px 26px;
+}
+
+.score {
+  width: 100px;
+  height: 30px;
+
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  z-index: 10;
+
+  color: #d48871;
+  font-family: Verdana;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: right;
+}
+
+.game-over {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  flex-direction: column;
+  text-align: center;
+  color: black;
+  border: 1px solid #eaf0e9;
+  background: #eaf0e9;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+@keyframes animarDino {
+  from {
+    background-position-x: -0px;
+  }
+  to {
+    background-position-x: -162px;
+  }
+}
+
+.game-over > p,
+ul {
+  font-size: 0.6em;
+}
+
+ul {
+  list-style: none;
+}
+
+.game-over > button {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 0.6em;
+  border-radius: 0.3em;
+  background: #d98841;
+}
+.game-over > button:hover {
+  background: #d93221;
+}
+.containerGameOver > h3 {
+  font-size: 0.7em;
+  color: #bf3030;
+}
+.loser {
+  width: 300px;
+  padding: 0.2em 0;
+  border: 1px solid #dad0d0ee;
+  border-radius: 0.2em;
+}
+#CantidadGanador,
+#LabelGanador,
+.linkTiendaOficial {
+  color: #bf3030;
+}
